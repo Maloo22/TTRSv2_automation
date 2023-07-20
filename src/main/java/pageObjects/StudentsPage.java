@@ -23,7 +23,9 @@ public class StudentsPage extends BaseMain {
     public String secondNameField = "//input[@id='lastName']";
     public String addStudentsbtn = "//body/p-dynamicdialog[1]/div[1]/div[1]/div[2]/app-add-students-dialog[1]/form[1]/blockable-div[1]/div[1]/div[1]/div[3]/button[2]";
 
-    
+   //public String activityDropdowns = "//body/app-root[1]/app-user-layout[1]/div[1]/div[1]/div[1]/app-activity-feed[1]/div[1]/div[1]/div[2]";
+   //waitForMessage.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(activityDropdowns)));
+
 
     //values
     public String firstName = "Andrew";

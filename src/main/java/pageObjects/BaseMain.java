@@ -7,6 +7,7 @@ public class BaseMain {
     public WebDriver driver;
 
     public BaseMain (WebDriver driver){
+
         this.driver = driver;
     }
 }

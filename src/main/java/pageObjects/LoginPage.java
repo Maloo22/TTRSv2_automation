@@ -21,7 +21,7 @@ public class LoginPage extends BaseMain {
     public String emailField = "//input[@id='Input_Email']";
     public String passwordField = "//input[@id='Input_Password']";
 
-    public String activityDropdowns = "//body/app-root[1]/app-user-layout[1]/div[1]/div[1]/div[1]/app-activity-feed[1]/div[1]/div[1]/div[2]";
+
 
     //values
     public String emailValue = "ccg3";
@@ -43,11 +43,12 @@ public class LoginPage extends BaseMain {
         driver.findElement(By.xpath(emailField)).sendKeys(emailValue);
         driver.findElement(By.xpath(passwordField)).sendKeys(passwordValue);
 
-        waitForMessage.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(activityDropdowns)));
+        //waitForMessage.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(logInBtn)));
 
     }
 
     public void clickSignIn(){
+
         driver.findElement(By.xpath(logInBtn)).click();
     }
 
