@@ -34,6 +34,7 @@ public class BaseTest {
         studentsPage = new StudentsPage(driver);
 
 
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
     }
 
