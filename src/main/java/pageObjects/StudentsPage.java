@@ -23,6 +23,7 @@ public class StudentsPage extends BaseMain {
     public String secondNameField = "//input[@id='lastName']";
     public String addStudentsbtn = "//body/p-dynamicdialog[1]/div[1]/div[1]/div[2]/app-add-students-dialog[1]/form[1]/blockable-div[1]/div[1]/div[1]/div[3]/button[2]";
 
+    public String alertAppear = "//div[@role='alert']"; //  //div[@class='p-toast-detail ng-tns-c3213092237-27']
    //public String activityDropdowns = "//body/app-root[1]/app-user-layout[1]/div[1]/div[1]/div[1]/app-activity-feed[1]/div[1]/div[1]/div[2]";
    //waitForMessage.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(activityDropdowns)));
 
@@ -52,6 +53,9 @@ public class StudentsPage extends BaseMain {
         driver.findElement(By.xpath(firstNameField)).sendKeys(firstName);
         driver.findElement(By.xpath(secondNameField)).sendKeys(secondName);
         driver.findElement(By.xpath(addStudentsbtn)).click();
+
+        WebDriverWait waitForMessage = new WebDriverWait(driver, Duration.ofSeconds(20));
+        waitForMessage.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(alertAppear)));
     }
 
 
